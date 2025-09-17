@@ -9,11 +9,9 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   # /api/v1/challenges
-    namespace :api do
-      namespace :v1 do
+  namespace :api do
+    namespace :v1 do
         resources :challenges
-      end
     end
-
-
+  end
 end
