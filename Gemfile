@@ -40,7 +40,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 end
 
-#faker gem added in development and test environments
+# faker gem added in development and test environments
 group :development, :test do
   gem "faker"
 end

@@ -1,8 +1,7 @@
 module Api
   module V1
     class ChallengesController < ApplicationController
-
-      before_action :set_challenge, only: [:show, :update, :destroy]
+      before_action :set_challenge, only: [ :show, :update, :destroy ]
 
       # GET /api/v1/challenges
       def index
@@ -38,7 +37,7 @@ module Api
       # DELETE /api/v1/challenges/:id
       def destroy
         @challenge.destroy
-        head :no_content 
+        head :no_content
       end
 
 
@@ -50,11 +49,10 @@ module Api
         render json: { error: "Challenge not found" }, status: :not_found
       end
 
-      
+
       def challenge_params
         params.require(:challenge).permit(:title, :description, :start_date, :end_date)
       end
-      
     end
   end
 end
